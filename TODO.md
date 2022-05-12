@@ -109,7 +109,7 @@ Install:
 - signalk-to-influxdb
 - vedirect-serial-usb
 - signalk-autopilot 
-
+- signalk-raspberry-pi-bme280
 
 # Install InfluxDB + Grafana
 ### Install flux + grafana using APT
@@ -152,5 +152,9 @@ Select InfluxDB as the data source type
 On the resulting screen, give it a useful name (I use my boat name, which is the same as the database name) and
 populate the URL field with http://localhost:8086, which is the address for your local InfluxDB server.
 
+# Setting up I2C
+sudo apt install i2c-tools
+    
+    
 # Install VictronConnect
 https://www.victronenergy.com/support-and-downloads/software#victronconnect-app
