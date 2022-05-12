@@ -152,9 +152,23 @@ Select InfluxDB as the data source type
 On the resulting screen, give it a useful name (I use my boat name, which is the same as the database name) and
 populate the URL field with http://localhost:8086, which is the address for your local InfluxDB server.
 
-# Setting up I2C
+# Debugging up I2C
 sudo apt install i2c-tools
-    
+ 
+# Raspotify
+# Install curl
+sudo apt-get -y install curl
+
+# Add the raspotify key to the keyring
+curl -sSL https://dtcooper.github.io/raspotify/key.asc | sudo tee /usr/share/keyrings/raspotify_key.asc  > /dev/null
+sudo chmod 644 /usr/share/keyrings/raspotify_key.asc
+
+# Create the apt repo
+echo 'deb [signed-by=/usr/share/keyrings/raspotify_key.asc] https://dtcooper.github.io/raspotify raspotify main' | sudo tee /etc/apt/sources.list.d/raspotify.list
+
+# Install package
+sudo apt-get update
+sudo apt-get -y install raspotify
     
 # Install VictronConnect
 https://www.victronenergy.com/support-and-downloads/software#victronconnect-app
