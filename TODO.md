@@ -107,9 +107,9 @@ Install:
 - signalk-derived-data
 - signalk-raspberry-pi-temperature
 - signalk-to-influxdb
-- vedirect-serial-usb
 - signalk-autopilot 
 - signalk-raspberry-pi-bme280
+- signalk/vedirect-serial-usb
 
 # Install InfluxDB + Grafana
 ### Install flux + grafana using APT
